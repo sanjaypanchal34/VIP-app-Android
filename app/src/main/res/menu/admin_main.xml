@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/opt_notification"
+        android:title="@string/notification"
+        app:actionLayout="@layout/action_bar_notifitcation_icon"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/opt_gift"
+        android:title="@string/notification"
+        app:actionLayout="@layout/gift_menu"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/opt_recommandation"
+        android:title="@string/notification"
+        app:actionLayout="@layout/recommdation_menu"
+        app:showAsAction="ifRoom"/>
+</menu>

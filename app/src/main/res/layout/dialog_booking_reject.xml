@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:contentPadding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:text="@string/reason"
+            android:textSize="?button"
+            />
+
+        <EditText
+            android:id="@+id/edt_reason"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/lite_grey_rect"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/reason"
+            android:inputType="text"
+            android:padding="@dimen/_5sdp"
+            android:textSize="?normal" />
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/blue_rect"
+            android:text="@string/reject"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

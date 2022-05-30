@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="@drawable/two_layer" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:navigationIcon="@drawable/ic_back_arrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/verification_code"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBar"
+        android:id="@+id/ln_otp"
+        android:gravity="center"
+        android:layout_margin="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="?normal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="@string/enter_the_verification_code_received_on_the_registered_mobile_number"/>
+        <com.mukesh.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemWidth="@dimen/_60sdp"
+            app:itemHeight="@dimen/_50sdp"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:itemRadius="@dimen/_2sdp"
+            app:cursorColor="@color/white"
+            android:itemBackground="@drawable/edit_rect"
+            app:itemSpacing="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            app:itemCount="4"
+            app:viewType="none"
+            />
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/btn_rect"
+            android:textAllCaps="true"
+            android:text="@string/validate_code"
+            android:textSize="?button" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,3 @@
+include ':app', ':spinner'
+rootProject.name='VIP@Marrakech'
+include ':phoneview'

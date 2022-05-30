@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:background="#156620"
+        android:id="@+id/ln_itinerary"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:id="@+id/tv_name"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="Sanjay Panchal"
+            android:textColor="@color/white"
+            android:textSize="?small" />
+
+        <TextView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/group_type"
+            android:id="@+id/tv_group"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="?small" />
+
+        <TextView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tv_pax"
+            android:text="@string/pax"
+            android:textColor="@color/white"
+            android:textSize="?small" />
+
+        <TextView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Date\nDate"
+            android:id="@+id/tv_date"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="?small" />
+
+        <TextView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center
+"
+            android:text="NB"
+            android:id="@+id/tv_status"
+            android:textColor="@color/white"
+            android:textSize="?small" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_content_copy"
+            android:visibility="gone"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_copy"
+            android:tint="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:id="@+id/iv_copy"
+            android:layout_height="@dimen/_20sdp"/>
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_delete_white"
+            android:id="@+id/iv_delete"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/under_line" />
+
+</LinearLayout>

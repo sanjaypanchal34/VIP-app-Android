@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="@drawable/two_layer" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <com.google.android.material.appbar.AppBarLayout
+           android:layout_width="match_parent"
+           android:id="@+id/appBar"
+           android:layout_height="wrap_content">
+
+           <androidx.appcompat.widget.Toolbar
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize"
+               android:gravity="center"
+               android:id="@+id/toolBar"
+               android:textAlignment="center"
+               app:navigationIcon="@drawable/ic_back_arrow"
+               app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+               app:titleTextColor="@color/white">
+               <com.vip.marrakech.customs.ToolBarTitleTextView
+                   android:id="@+id/toolbar_title"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="@string/edit_itinerary"
+                   android:textColor="@color/white"
+                   android:textSize="?button" />
+           </androidx.appcompat.widget.Toolbar>
+       </com.google.android.material.appbar.AppBarLayout>
+       <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="@dimen/_15sdp"
+               android:orientation="vertical">
+
+               <EditText
+                   android:id="@+id/edt_user_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_35sdp"
+                   android:layout_marginTop="@dimen/_20sdp"
+                   android:background="@drawable/edit_rect"
+                   android:drawableStart="@drawable/ic_person_outline"
+                   android:drawableLeft="@drawable/ic_person_outline"
+                   android:drawablePadding="@dimen/_10sdp"
+                   android:hint="@string/client_name"
+                   android:inputType="textPersonName"
+                   android:padding="@dimen/_4sdp"
+                   android:textColor="@color/colorHint"
+                   android:textColorHint="@color/white"
+                   android:textSize="?normal" />
+
+               <TextView
+                   android:id="@+id/edt_email"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_35sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:background="@drawable/edit_rect"
+                   android:drawableStart="@drawable/ic_mail_outline"
+                   android:drawableLeft="@drawable/ic_mail_outline"
+                   android:drawablePadding="@dimen/_10sdp"
+                   android:gravity="center_vertical"
+                   android:hint="@string/email_address"
+                   android:padding="@dimen/_4sdp"
+                   android:inputType="textEmailAddress"
+                   android:textColor="@color/colorHint"
+                   android:textColorHint="@color/white"
+                   android:textSize="?normal" />
+
+               <EditText
+                   android:id="@+id/edt_mobile"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_35sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:background="@drawable/edit_rect"
+                   android:drawableStart="@drawable/ic_telephone"
+                   android:drawablePadding="@dimen/_10sdp"
+                   android:gravity="center_vertical"
+                   android:hint="@string/contact_number"
+                   android:inputType="phone"
+                   android:padding="@dimen/_4sdp"
+                   android:textColor="@color/colorHint"
+                   android:textColorHint="@color/white"
+                   android:textSize="?normal" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_15sdp">
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="@dimen/_2sdp"
+                       android:layout_weight="1"
+                       android:background="@drawable/edit_rect">
+
+                       <com.jaredrummler.materialspinner.MaterialSpinner
+                           android:id="@+id/sp_grp_type"
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_35sdp"
+                           android:ellipsize="end"
+                           android:entries="@array/select_type"
+                           android:gravity="center_vertical"
+                           android:hint="@string/group_type"
+                           android:maxLines="1"
+                           android:textColor="@color/colorHint"
+                           android:textColorHint="@color/white"
+                           android:textSize="?normal"
+                           app:drawable_padding="@dimen/_10sdp"
+                           app:left_drawable="@drawable/ic_group"
+                           app:ms_background_color="#00000000"
+                           app:ms_hide_arrow="false"
+                           app:ms_padding_bottom="@dimen/_4sdp"
+                           app:ms_padding_left="@dimen/_4sdp"
+                           app:ms_padding_right="@dimen/_4sdp"
+                           app:ms_padding_top="@dimen/_4sdp"
+
+                           app:right_drawable="@drawable/ms__spinner_drop_down" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="@dimen/_2sdp"
+                       android:layout_weight="1"
+                       android:background="@drawable/edit_rect">
+
+                       <com.jaredrummler.materialspinner.MaterialSpinner
+                           android:id="@+id/sp_pax"
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_35sdp"
+                           android:ellipsize="end"
+                           android:entries="@array/select_type"
+                           android:gravity="center_vertical"
+                           android:hint="@string/pax"
+                           android:maxLines="1"
+                           android:textColor="@color/white"
+                           android:textColorHint="@color/white"
+                           android:textSize="?normal"
+                           app:drawable_padding="@dimen/_10sdp"
+                           app:left_drawable="@drawable/ic_pax"
+                           app:ms_background_color="#00000000"
+                           app:ms_hide_arrow="false"
+                           app:ms_padding_bottom="@dimen/_4sdp"
+                           app:ms_padding_left="@dimen/_4sdp"
+                           app:ms_padding_right="@dimen/_4sdp"
+                           app:ms_padding_top="@dimen/_4sdp"
+                           app:right_drawable="@drawable/ms__spinner_drop_down" />
+                   </LinearLayout>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_15sdp">
+
+                   <TextView
+                       android:id="@+id/tv_arrival_date"
+                       android:layout_width="0dp"
+                       android:layout_height="@dimen/_35sdp"
+                       android:layout_marginEnd="@dimen/_2sdp"
+                       android:layout_weight="1"
+                       android:background="@drawable/edit_rect"
+                       android:drawableStart="@drawable/ic_booking"
+                       android:drawablePadding="@dimen/_10sdp"
+                       android:ellipsize="end"
+                       android:gravity="center_vertical"
+                       android:hint="@string/arrival_date"
+                       android:maxLines="1"
+                       android:padding="@dimen/_4sdp"
+                       android:textColor="@color/colorHint"
+                       android:textColorHint="@color/white"
+                       android:textSize="?normal" />
+
+                   <TextView
+                       android:id="@+id/tv_dep_date"
+                       android:layout_width="0dp"
+                       android:layout_height="@dimen/_35sdp"
+                       android:layout_marginStart="@dimen/_2sdp"
+                       android:layout_weight="1"
+                       android:background="@drawable/edit_rect"
+                       android:drawableStart="@drawable/ic_booking"
+                       android:drawablePadding="@dimen/_10sdp"
+                       android:ellipsize="end"
+                       android:gravity="center_vertical"
+                       android:hint="@string/departure_date"
+                       android:maxLines="1"
+                       android:padding="@dimen/_4sdp"
+                       android:textColor="@color/colorHint"
+                       android:textColorHint="@color/white"
+                       android:textSize="?normal" />
+               </LinearLayout>
+
+               <Button
+                   android:id="@+id/btn_next"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_35sdp"
+                   android:layout_marginTop="@dimen/_20sdp"
+                   android:layout_marginBottom="@dimen/_20sdp"
+                   android:background="@drawable/btn_rect"
+                   android:text="@string/next"
+                   android:textSize="?button" />
+           </LinearLayout>
+       </androidx.core.widget.NestedScrollView>
+   </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_rect"
+    android:orientation="vertical"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_toStartOf="@+id/ln_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="VIP Table"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_table_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="VIP Table"
+                android:textColor="@color/book_btn"
+                android:textSize="?normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ln_table"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/tv_heading_table"
+                android:text="@string/no_of_table"
+                android:textColor="@color/white"
+                android:textSize="?small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_number_of_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="?small" />
+        </LinearLayout>
+    </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:gravity="center_vertical"
+       android:layout_marginTop="@dimen/_3sdp"
+       android:layout_height="wrap_content">
+       <TextView
+           android:id="@+id/tv_alcohol_name"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:text="VIP Table"
+           android:paddingEnd="@dimen/_5sdp"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_10ssp" />
+
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/rd_select"
+           android:button="@drawable/radio_selector"/>
+   </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:ellipsize="end"
+        android:id="@+id/tv_see_alcohol_list"
+        android:maxLines="2"
+        android:text="@string/see_club_menu_for_full_alcohol_list"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:id="@+id/tv_spend"
+                android:text="@string/total_spend_colun"
+                android:textColor="@color/white"
+                android:textSize="?small"/>
+
+            <TextView
+                android:id="@+id/price_in_MAD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/total_spend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

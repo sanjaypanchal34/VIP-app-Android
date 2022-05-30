@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/toolBar"
+            app:menu="@menu/user_initerary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/my_bookings"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutItinerary"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        android:layout_width="match_parent"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        android:layout_height="@dimen/_45sdp"
+        app:tabTextAppearance="@style/MyCustomTextAppearanceUser"
+        app:tabBackground="@drawable/itinerary_tab_selector" />
+
+    <com.vip.marrakech.customs.NonSwipeableViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_itinerary"/>
+</LinearLayout>

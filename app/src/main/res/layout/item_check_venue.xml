@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:button="@null"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:drawableEnd="@drawable/ic_radio_selector"
+        android:paddingStart="@dimen/_15sdp"
+        android:id="@+id/cb_string"
+        android:textSize="?button"
+        android:paddingTop="@dimen/_5sdp"/>
+</LinearLayout>

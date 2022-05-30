@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.fragments.AdminBookingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBar"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:id="@+id/toolBar"
+            android:textAlignment="center"
+            app:menu="@menu/admin_main"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"/>
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/statisctics"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="#131313"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_total_client"
+        android:textColor="@color/white"
+        android:text="@string/total_number_of_people_s"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="#CBCBCB"
+        android:id="@+id/tv_total_booking"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:text="@string/total_number_of_individual_bookings_s"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="#131313"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:id="@+id/tv_total_spend"
+        android:text="@string/total_spend_s"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="#CBCBCB"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_total_cancellation"
+        android:textColor="@color/black"
+        android:text="@string/total_number_of_cancellation_s"/>
+
+</LinearLayout>

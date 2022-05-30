@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/opt_add"
+        android:title="@string/other_booking_list"
+        android:icon="@drawable/ic_booking_white"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/opt_notification"
+        android:title="@string/notification"
+        app:actionLayout="@layout/action_bar_notifitcation_icon"
+        android:icon="@drawable/ic_notfication"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>

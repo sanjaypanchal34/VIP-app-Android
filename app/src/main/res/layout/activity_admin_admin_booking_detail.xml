@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBar"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:id="@+id/toolBar"
+            app:navigationIcon="@drawable/ic_back_arrow"
+            android:textAlignment="center"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/font_menium"
+                android:text="@string/itinerary_detail"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/client_name"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tv_client"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/group_type"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tv_group"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/pax"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:id="@+id/tv_pax"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:text="@string/total_spend"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="0"
+                android:id="@+id/tv_total_spend"
+                android:textColor="@color/white"
+                android:textSize="?button"
+                android:padding="@dimen/_3sdp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageResource="@drawable/user_main_layer" />
+
+
+        <LinearLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/tv_date"
+                android:text="Sat, 27-Mar-2021"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:tint="@color/user_itinerary_tab_selected"
+                    android:src="@drawable/ic_watch_10"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="?normal"
+                    android:id="@+id/tv_day_detail"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="09:30 - Lotus Club"/>
+
+                <Button
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/btn_cancel"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:background="@drawable/red_rect"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/cancel"/>
+
+            </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/white"
+                   android:text="@string/concierge_name"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                    android:id="@+id/tv_concierge"
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/white"
+                   android:text=" : "
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/white"
+                   android:text="@string/table_number"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                    android:id="@+id/tv_table_no"
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/white"
+                   android:text=" : "
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

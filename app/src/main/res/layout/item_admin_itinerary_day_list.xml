@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/blue"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_watch_white"
+            android:textColor="@color/white"
+            android:text="@string/day_1"
+            android:id="@+id/tv_day"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="?normal"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_booking_white"
+            android:textColor="@color/white"
+            android:hint="@string/select_date"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:textSize="?normal"
+            android:id="@id/tv_date"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/tv_go"
+            android:drawablePadding="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/blue"
+            android:id="@+id/tv_go"
+            android:text="@string/plus"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="?subHeading"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_toStartOf="@id/iv_delete"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/white"
+            android:padding="@dimen/_6sdp"
+            android:id="@+id/iv_delete"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        android:id="@+id/rv_sub_day"
+        tools:listitem="@layout/item_admin_itinerary_day_list_sub"/>
+</LinearLayout>

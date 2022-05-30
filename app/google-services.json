@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "117248701879",
+    "firebase_url": "https://vipapp-dfb6b.firebaseio.com",
+    "project_id": "vipapp",
+    "storage_bucket": "vipapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117248701879:android:f458ab5b885b4004426432",
+        "android_client_info": {
+          "package_name": "com.vip.marrakech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117248701879-pietap42l880f5tc7g2a4lg0ugpep6fs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vip.marrakech",
+            "certificate_hash": "6e4a3ffda54e09e6b38845cdcc3d4ecb1ccef356"
+          }
+        },
+        {
+          "client_id": "117248701879-lpp6el1q95sr6253u0nhkfajocp6decr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN8kCoXGB1IoLKMbCesgLMhKkO49ChSwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117248701879-lpp6el1q95sr6253u0nhkfajocp6decr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "117248701879-090faijc2ad4baop31d0orrjseaiepft.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vipapp.marrakech"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

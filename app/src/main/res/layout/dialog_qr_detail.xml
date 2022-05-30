@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_c_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+
+        <TextView
+            android:id="@+id/tv_pax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+
+        <TextView
+            android:id="@+id/tv_concierge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+
+        <TextView
+            android:id="@+id/tv_balance_to_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/client_name"
+            android:textColor="@color/black"
+            android:textSize="?normal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_no"
+                android:text="@string/enter_table_no"
+                android:textColor="@color/black"
+                android:textSize="?normal" />
+
+            <EditText
+                android:id="@+id/edt_table"
+                android:inputType="number"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textCursorDrawable="@drawable/black_cursor"
+                android:background="@drawable/edit_rect_blue" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/blue_rect"
+            android:text="@string/submit"
+            android:id="@+id/btn_submit"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/_30sdp"
+    android:padding="@dimen/_3sdp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+          android:gravity="center_vertical"
+          android:layout_width="@dimen/_70sdp"
+          android:layout_height="wrap_content"
+          android:textSize="?small"
+          android:textColor="@color/white"
+          android:id="@+id/tv_date"
+          android:text="Tue 20/8, 23.15"/>
+      <TextView
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:textSize="?small"
+          android:id="@+id/tv_client"
+          android:maxLines="2"
+          android:ellipsize="end"
+          android:textColor="@color/white"
+          android:text="Rupal Gohil"/>
+
+      <TextView
+          android:gravity="center"
+          android:layout_width="@dimen/_30sdp"
+          android:layout_height="match_parent"
+          android:textSize="?small"
+          android:id="@+id/tv_pax"
+          android:textColor="@color/white"
+          android:text="5"/>
+
+      <TextView
+          android:gravity="center_vertical"
+          android:layout_width="@dimen/_55sdp"
+          android:textColor="@color/white"
+          android:layout_height="match_parent"
+          android:id="@+id/tv_vendor"
+          android:textSize="?small"
+          android:maxLines="2"
+          android:ellipsize="end"
+          android:text="1,000.00"/>
+
+      <TextView
+          android:gravity="center_vertical"
+          android:layout_width="@dimen/_40sdp"
+          android:textColor="@color/white"
+          android:layout_height="match_parent"
+          android:id="@+id/tv_type"
+          android:textSize="?small"
+          android:paddingLeft="@dimen/_2sdp"
+          android:paddingRight="@dimen/_2sdp"
+          android:text="Admin"/>
+
+      <RelativeLayout
+          android:layout_width="@dimen/_35sdp"
+          android:layout_gravity="center_vertical"
+          android:layout_height="@dimen/_20sdp">
+          <ImageView
+              android:layout_width="@dimen/_35sdp"
+              android:layout_height="match_parent"
+              android:id="@+id/iv_status"
+              android:src= "@drawable/blue_rect"
+              app:tint="@color/black" />
+          <TextView
+              android:layout_width="@dimen/_25sdp"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textSize="?small"
+              android:text="B"
+              android:gravity="center"
+              android:id="@+id/tv_status"
+              android:textColor="@color/white"/>
+      </RelativeLayout>
+  </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@color/under_line"/>
+</LinearLayout>

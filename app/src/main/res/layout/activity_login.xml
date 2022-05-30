@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+
+    tools:context=".activities.LoginActivity">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="@drawable/two_layer" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/login"
+               android:textSize="@dimen/_25ssp"
+               android:textColor="@color/white"
+               android:layout_gravity="center_horizontal"/>
+
+            <View
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:background="@color/white"/>
+            <EditText
+                android:textColorHint="@color/white"
+                android:hint="@string/email_address"
+                android:padding="@dimen/_4sdp"
+                android:id="@+id/edt_email"
+                android:drawableLeft="@drawable/ic_mail_outline"
+                android:layout_width="match_parent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textSize="?button"
+                android:textColor="@color/white"
+                android:layout_height="@dimen/_35sdp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_rect"
+                android:drawableStart="@drawable/ic_mail_outline" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:textColorHint="@color/white"
+                android:hint="@string/password"
+                android:padding="@dimen/_4sdp"
+                android:drawableLeft="@drawable/ic_lock_outline"
+                android:layout_width="match_parent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="?button"
+                android:textColor="@color/white"
+                android:layout_height="@dimen/_35sdp"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_rect"
+                android:drawableStart="@drawable/ic_lock_outline" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="?normal"
+                    app:buttonTint="@color/white"
+                    android:id="@+id/cb_remember"
+                    android:checked="false"
+                    android:textColor="@color/white"
+                    android:text="@string/remember_me"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="?normal"
+                    android:id="@+id/tv_forgot_password"
+                    android:textColor="@color/white"
+                    android:text="@string/forgot_password_"/>
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/btn_rect"
+                android:text="@string/sign_in"
+                android:textSize="?button"
+                android:id="@+id/btn_login"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/btn_rect"
+                android:text="@string/new_user_"
+                android:textSize="?button"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/tv_register"
+                android:textAllCaps="false"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/new_user_"
+                    android:textColor="@color/white"
+                    android:textSize="?normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:visibility="gone"
+
+                    android:textColor="@color/white"
+                    android:textSize="?normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/tv_as_guest"
+                android:textSize="?button"
+                android:background="@drawable/rect_guest_button"
+                android:text="@string/continue_as_guest"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_summary"
+    android:minHeight="@dimen/_250sdp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/tv_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/booking_summary"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_clear"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:tint="@color/white" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tv_date"
+                android:text="Date &amp; Time:\n21-02-2027"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Group Size:\n27"
+                android:id="@+id/tv_pax"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/blue_rect"
+            android:paddingHorizontal="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:src="@drawable/warning"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_margin="@dimen/_5sdp" />
+          <com.jaredrummler.materialspinner.MaterialSpinner
+              android:id="@+id/sp_currency"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+              android:ellipsize="end"
+              android:entries="@array/select_type"
+              android:gravity="center_vertical"
+              android:hint="@string/select_home_currency"
+              android:maxLines="1"
+              android:textColor="@color/white"
+              android:textColorHint="@color/white"
+              android:textSize="?normal"
+              app:drawable_padding="@dimen/_10sdp"
+              app:ms_arrow_tint="@color/white"
+              app:ms_background_color="#00000000"
+              app:ms_hide_arrow="false"
+              app:ms_hint="@string/select_home_currency"
+              app:ms_hint_color="@color/white"
+              app:ms_padding_bottom="@dimen/_4sdp"
+              app:ms_padding_left="@dimen/_1sdp"
+              app:ms_padding_right="@dimen/_1sdp"
+              app:ms_padding_top="@dimen/_4sdp"
+              app:ms_text_color="@color/white"
+              app:right_drawable="@drawable/ms__spinner_drop_down_black" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="@string/_20_refundable_ndeposit_mad"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="04"
+                android:gravity="center"
+                android:background="@drawable/blue_rect"
+                android:id="@+id/tv_charge_mad"
+                android:inputType="number"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="@string/_20_refundable_ndeposit_in_home_currency"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="04"
+                android:id="@+id/tv_charge_home"
+                android:gravity="center"
+                android:background="@drawable/blue_rect"
+                android:inputType="number"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:id="@+id/tv_for_female"
+            android:text="@string/for_entry_tickets_the_full_cost_is_payable_upfront"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_rect"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/pay_deposit_now"
+            android:id="@+id/tv_pay"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_20sdp"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/important_notice"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/refundable_deposit_is_paid_in_your_home_currency"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

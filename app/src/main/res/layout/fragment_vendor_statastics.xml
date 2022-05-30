@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.fragments.AdminBookingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:menu="@menu/user_initerary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter" />
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/statisctics"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_total_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#131313"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/total_number_of_client_s"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_total_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CBCBCB"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/total_number_of_booking_s"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_total_no_shows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#131313"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/total_number_of_no_show_s"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_average_spend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CBCBCB"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/average_spend_per_client"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#131313"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/total_spend"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tv_total_spend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#131313"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="1000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+</LinearLayout>

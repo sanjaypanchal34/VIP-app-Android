@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minHeight="@dimen/_25sdp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="match_parent"
+        android:textSize="?small"
+        android:id="@+id/tv_date"
+        android:textColor="@color/white"
+        android:text="@string/date_amp_time"/>
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textSize="?small"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:id="@+id/tv_c_name"
+        android:textColor="@color/white"
+        android:text="@string/concierge_name"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="@dimen/_60sdp"
+        android:textColor="@color/white"
+        android:layout_height="match_parent"
+        android:textSize="?small"
+        android:id="@+id/tv_total_client"
+        android:text="1"/>
+
+
+
+    <TextView
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="match_parent"
+        android:textSize="?small"
+        android:text="@string/commission"
+        android:id="@+id/tv_commission"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@color/under_line"/>
+</LinearLayout>

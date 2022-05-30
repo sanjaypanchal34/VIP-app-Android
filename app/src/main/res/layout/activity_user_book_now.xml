@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".user.activities.UserBookNowActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="@drawable/user_main_layer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".vendor.fragments.VendorOtherAddBookingFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:navigationIcon="@drawable/ic_back_arrow"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@color/white">
+
+
+                <com.vip.marrakech.customs.ToolBarTitleTextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/booking_information"
+                    android:textColor="@color/white"
+                    android:textSize="?button" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edit_rect">
+
+                    <ImageView
+                        android:id="@+id/iv_location"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_location_green" />
+
+                    <TextView
+                        android:id="@+id/tv_venue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/search_venue"
+                        android:minHeight="@dimen/_40sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        android:textSize="?normal" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_rect">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/sp_pax"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_31sdp"
+                            android:ellipsize="end"
+                            android:entries="@array/select_type"
+                            android:gravity="center_vertical"
+                            android:hint="@string/pax"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="?normal"
+                            app:drawable_padding="@dimen/_10sdp"
+                            app:left_drawable="@drawable/ic_pax"
+                            app:ms_background_color="#00000000"
+                            app:ms_hide_arrow="false"
+                            app:ms_hint="@string/pax"
+                            app:ms_padding_bottom="@dimen/_4sdp"
+                            app:ms_padding_left="@dimen/_4sdp"
+                            app:ms_padding_right="@dimen/_4sdp"
+                            app:ms_padding_top="@dimen/_4sdp"
+                            app:right_drawable="@drawable/ms__spinner_drop_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_rect">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/sp_group_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_31sdp"
+                            android:ellipsize="end"
+                            android:entries="@array/select_type"
+                            android:gravity="center_vertical"
+                            android:hint="@string/group_type"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="?normal"
+                            app:drawable_padding="@dimen/_10sdp"
+                            app:left_drawable="@drawable/ic_group"
+                            app:ms_background_color="#00000000"
+                            app:ms_hide_arrow="false"
+                            app:ms_hint="@string/group_type"
+                            app:ms_padding_bottom="@dimen/_4sdp"
+                            app:ms_padding_left="@dimen/_4sdp"
+                            app:ms_padding_right="@dimen/_4sdp"
+                            app:ms_padding_top="@dimen/_4sdp"
+                            app:right_drawable="@drawable/ms__spinner_drop_down" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_rect"
+                        android:drawableStart="@drawable/ic_booking"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/date"
+                        android:maxLines="1"
+                        android:padding="@dimen/_4sdp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="?normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ln_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_rect">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/sp_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_31sdp"
+                            android:ellipsize="end"
+                            android:entries="@array/select_type"
+                            android:gravity="center_vertical"
+                            android:hint="@string/time"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="?normal"
+                            app:drawable_padding="@dimen/_10sdp"
+                            app:left_drawable="@drawable/ic_watch_white"
+                            app:ms_background_color="#00000000"
+                            app:ms_hide_arrow="false"
+                            app:ms_hint="@string/time"
+                            app:ms_padding_bottom="@dimen/_4sdp"
+                            app:ms_padding_left="@dimen/_4sdp"
+                            app:ms_padding_right="@dimen/_4sdp"
+                            app:ms_padding_top="@dimen/_4sdp"
+                            app:right_drawable="@drawable/ms__spinner_drop_down" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ln_sub_service"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_rect">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/sp_services"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_31sdp"
+                            android:ellipsize="end"
+                            android:entries="@array/select_type"
+                            android:gravity="center_vertical"
+                            android:hint="@string/service"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="?normal"
+                            android:enabled="false"
+                            app:drawable_padding="@dimen/_10sdp"
+                            app:left_drawable="@drawable/ic_table"
+                            app:ms_background_color="#00000000"
+                            app:ms_hide_arrow="true"
+                            app:ms_hint="@string/service"
+                            app:ms_padding_bottom="@dimen/_4sdp"
+                            app:ms_padding_left="@dimen/_4sdp"
+                            app:ms_padding_right="@dimen/_4sdp"
+                            app:ms_padding_top="@dimen/_4sdp"
+                            app:right_drawable="@drawable/ms__spinner_drop_down" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ln_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edit_rect">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_table_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_31sdp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/table_type"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="?normal"
+                        app:drawable_padding="@dimen/_10sdp"
+                        app:left_drawable="@drawable/ic_table"
+                        app:ms_background_color="#00000000"
+                        app:ms_hide_arrow="false"
+                        app:ms_hint="@string/table_type"
+                        app:ms_padding_bottom="@dimen/_4sdp"
+                        app:ms_padding_left="@dimen/_4sdp"
+                        app:ms_padding_right="@dimen/_4sdp"
+                        app:ms_padding_top="@dimen/_4sdp"
+                        app:right_drawable="@drawable/ms__spinner_drop_down" />
+                </LinearLayout>
+<!--
+                <LinearLayout
+                    android:id="@+id/ln_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/edit_rect">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_currency"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_31sdp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:hint="@string/home_curency"
+                        android:maxLines="1"
+
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="?normal"
+                        app:drawable_padding="@dimen/_10sdp"
+                        app:ms_background_color="#00000000"
+                        app:ms_hide_arrow="false"
+                        app:ms_hint="@string/home_curency"
+                        app:ms_padding_bottom="@dimen/_4sdp"
+                        app:ms_padding_left="@dimen/_4sdp"
+                        app:ms_padding_right="@dimen/_4sdp"
+                        app:ms_padding_top="@dimen/_4sdp"
+                        app:right_drawable="@drawable/ms__spinner_drop_down" />
+                </LinearLayout>-->
+
+              <!--  <LinearLayout
+                    android:id="@+id/ln_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_imp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:text="@string/important_information"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/for_group_of_8_or_more_a_reservation_deposit_of_mad100_per_person_will_be_taken_deposit_will_be_refunded_once_the_venue_checks_you_in_on_the_night"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/ln_bottle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_bottle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/white_rect_no_radios"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:text="@string/add_bottles"
+                            android:textColor="@color/blue"
+                            android:textSize="?normal" />
+
+                        <ImageView
+                            android:id="@+id/iv_add_bottle"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_add_blue"
+                            android:tint="@color/black" />
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_bottle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_admin_itinerary_day_data_bottel" />
+
+                    <TextView
+                        android:id="@+id/tv_total_spend"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_rect"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:textSize="?button"
+
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.vip.marrakech.customs.ToolBarTitleTextView
+                    android:id="@+id/tv_table_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:text="@string/table_option"
+                    android:textColor="@color/white"
+                    android:textSize="?normal"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_table_option"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <Button
+            android:id="@+id/btn_book_now"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/green_rect"
+            android:text="@string/book_now"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="?button" />
+    </LinearLayout>
+</RelativeLayout>

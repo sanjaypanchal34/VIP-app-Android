@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0F"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    tools:context=".user.activities.PromotionDetailUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:sliderAutoCycleDirection="right"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMarginBottom="@dimen/_65sdp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorSelectedColor="@color/white"
+            app:sliderIndicatorUnselectedColor="#6FD5D2D2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_title"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.vip.marrakech.customs.CustomFontTextView
+                android:id="@+id/tv_user_venue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:ellipsize="end"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            app:navigationIcon="@drawable/ic_back_arrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+
+
+
+
+
+        <!-- <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_marginTop="@dimen/_3sdp"
+             tools:itemCount="3"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+             android:orientation="vertical"
+             tools:listitem="@layout/item_user_promotion_detail"
+             android:layout_weight="1"/>-->
+
+        <TextView
+            android:id="@+id/tv_user_promotion_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_13sdp"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_height="wrap_content">
+
+            <com.vip.marrakech.customs.CustomFontTextView
+                android:id="@+id/iv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/top_btn_rect"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="@string/location"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                app:drawableStartCompat="@drawable/ic_location" />
+
+            <Button
+                android:id="@+id/btn_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/menu_rect"
+                android:drawableStart="@drawable/ic_menu_book"
+                android:drawablePadding="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="@string/menu"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="?small" />
+        </RelativeLayout>
+        <com.vip.marrakech.customs.CustomFontTextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/venue_information"
+            android:textColor="@color/white"
+            android:textSize="?button"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_info"
+            android:layout_marginHorizontal="@dimen/_15sdp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln_book"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/green_rect"
+        android:gravity="center">
+
+        <com.vip.marrakech.customs.CustomFontTextView
+            android:id="@+id/tv_book_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/book_now"
+            android:textColor="@color/white"
+            android:textSize="?subHeading" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.fragments.AdminBookingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBar"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:id="@+id/toolBar"
+            android:textAlignment="center"
+            app:menu="@menu/admin_main"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"/>
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/booking"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_2sdp"
+        android:background="@color/tb_selected"
+        android:layout_height="@dimen/_30sdp">
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="?small"
+            android:textColor="@color/white"
+            android:text="@string/date_amp_time"/>
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="?small"
+            android:textColor="@color/white"
+            android:text="@string/client_name"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:textSize="?small"
+            android:text="@string/vendor"/>
+
+        <TextView
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="wrap_content"
+            android:textSize="?small"
+            android:text="Status"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_bookings"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_60sdp"
+        tools:listitem="@layout/item_admin_booking"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:itemCount="20"/>
+</LinearLayout>

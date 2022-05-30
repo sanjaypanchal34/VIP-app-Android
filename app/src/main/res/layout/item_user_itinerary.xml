@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_1sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:background="@drawable/white_rect"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tv_user_iti_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:text="Thur 20 Aug 2019 – Sun 23 Aug 2019"
+        android:textColor="@color/black"
+        android:textSize="?normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="00:10 AM"
+            android:textColor="@color/black"
+            android:textSize="?small" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/tv_user_iti_pax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="Group Size - 1"
+            android:textColor="@color/black"
+            android:textSize="?small"
+            tools:ignore="RtlSymmetry" />
+        <View
+            android:layout_width="1dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:background="@color/blue" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_venue"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="Group Size - 1"
+            android:textColor="@color/black"
+            android:textSize="?small"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".user.activities.UserRecommendationSearchActivity">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="@drawable/two_layer"
+        app:actualImageScaleType="fitXY" />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBar"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <androidx.appcompat.widget.Toolbar
+              android:id="@+id/toolBar"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:gravity="center"
+              android:textAlignment="center"
+              app:navigationIcon="@drawable/ic_back_arrow"
+              app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+              app:titleTextColor="@color/white">
+
+              <com.vip.marrakech.customs.ToolBarTitleTextView
+                  android:id="@+id/toolbar_title"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/search"
+                  android:textColor="@color/white"
+                  android:textSize="?button" />
+          </androidx.appcompat.widget.Toolbar>
+
+          <EditText
+              android:layout_width="match_parent"
+              android:background="@drawable/search_grey_rect"
+              android:layout_margin="@dimen/_8sdp"
+              android:padding="@dimen/_5sdp"
+              android:id="@+id/edt_search"
+              android:inputType="textAutoComplete"
+              android:textColor="@color/white"
+              android:drawablePadding="@dimen/_5sdp"
+              android:textSize="@dimen/_12ssp"
+              android:textColorHint="@color/white"
+              android:hint="@string/search_venue_recommendation"
+              android:drawableStart="@drawable/ic_search_grey"
+              android:layout_height="@dimen/_35sdp"/>
+      </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_top_list"/>
+</RelativeLayout>

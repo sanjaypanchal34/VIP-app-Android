@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_type" >
+        <item>Demo</item>
+    </string-array>
+    <string-array name="select_group_type" >
+        <item>Family</item>
+        <item>Males</item>
+        <item>Females</item>
+        <item>Couples</item>
+        <item>Mixed Group</item>
+    </string-array>
+
+    <string-array name="select_venue_type" >
+        <item>Nightclub</item>
+        <item>Day Party</item>
+        <item>Restaurant</item>
+        <item>Shisha Lounge</item>
+        <item>Rooftop Bars</item>
+        <item>Experiences</item>
+    </string-array>
+
+    <string-array name="select_table_type" >
+        <item>VIP table</item>
+        <item>VIP Dance floor table</item>
+        <item>VVIP table</item>
+        <item>VIP DJ table</item>
+        <item>VIP group table</item>
+        <item>VIP Sofa table</item>
+        <item>VIP Daybed</item>
+        <item>VIP Opium Bed</item>
+        <item>VIP Cabana</item>
+        <item>VIP Jacuzzi</item>
+        <item>VIP Large Jacuzzi</item>
+
+    </string-array>
+    <string-array name="select_services">
+        <item>First</item>
+        <item>Second</item>
+    </string-array>
+
+
+    <string-array name="select_first_services">
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+    </string-array>
+
+
+
+
+    <string-array name="select_second_services">
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+    </string-array>
+</resources>

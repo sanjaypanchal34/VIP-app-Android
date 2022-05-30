@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:gravity="center_horizontal"
+    android:background="#18181A"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_35sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:hint="@string/date"
+        android:id="@+id/tv_date"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorHint"
+        android:padding="@dimen/_5sdp"
+        android:textSize="?normal" />
+
+    <TextView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/edit_rect_avai"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/tv_time"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorHint"
+        android:hint="@string/count"
+        android:padding="@dimen/_5sdp"
+        android:textSize="?normal" />
+
+    <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:id="@+id/iv_delete"
+        android:visibility="gone"
+        android:src="@drawable/ic_delete_white" />
+</LinearLayout>

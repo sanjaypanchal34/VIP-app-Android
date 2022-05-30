@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:visibility="gone"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_watch_white"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="10/11/2019"
+            android:id="@+id/tv_date"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/white" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_15sdp">
+
+
+
+
+
+
+
+            <com.vip.marrakech.customs.CustomSpinner
+                android:paddingStart="@dimen/_5sdp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/sp_venue_type"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:hint="Venue Type"
+                android:gravity="center_vertical"
+                android:textSize="?normal"
+                android:textColor="@color/white"
+                android:drawableEnd="@drawable/ic_spinner_drop_down"
+                android:background="@drawable/edit_rect"
+                android:layout_height="match_parent" />
+
+        <com.vip.marrakech.customs.CustomSpinner
+            android:paddingStart="@dimen/_5sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/sp_venue"
+            android:layout_width="0dp"
+            android:hint="Venue"
+            android:gravity="center_vertical"
+            android:textSize="?normal"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_spinner_drop_down"
+            android:background="@drawable/edit_rect"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_start"
+            android:textStyle="normal"
+            android:textSize="?normal"
+            android:textColor="@color/white"
+            android:hint= "Start"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@drawable/edit_rect"
+            android:paddingLeft="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:drawableEnd="@drawable/ic_spinner_drop_down"
+            android:layout_height="match_parent" />
+
+
+        <com.vip.marrakech.customs.CustomSpinner
+            android:paddingStart="@dimen/_5sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/sp_table_type"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:textSize="?normal"
+            android:hint="Table"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_spinner_drop_down"
+            android:background="@drawable/edit_rect"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/ln_bottle"
+      android:visibility="gone"
+      android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_margin="@dimen/_15sdp"
+          android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_30sdp"
+              android:background="@drawable/white_rect_no_radios"
+              android:gravity="center_vertical"
+              android:paddingStart="@dimen/_8sdp"
+              android:paddingEnd="@dimen/_8sdp"
+              android:text="@string/add_bottles"
+              android:textColor="@color/blue"
+              android:textSize="?normal" />
+
+          <ImageView
+              android:layout_alignParentEnd="true"
+              android:layout_width="@dimen/_30sdp"
+              android:layout_height="@dimen/_30sdp"
+              android:padding="@dimen/_5sdp"
+              android:id="@+id/iv_add_bottle"
+              android:tint="@color/black"
+              android:layout_centerVertical="true"
+              android:src="@drawable/ic_add_blue"/>
+      </RelativeLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/rv_bottle"
+          android:layout_marginStart="@dimen/_15sdp"
+          android:layout_marginEnd="@dimen/_15sdp"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:itemCount="1"
+          tools:listitem="@layout/item_admin_itinerary_day_data_bottel" />
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:id="@+id/tv_total_spend"
+          android:textStyle="bold"
+          android:layout_marginStart="@dimen/_15sdp"
+          android:layout_marginEnd="@dimen/_15sdp"
+          android:textSize="?button"
+          android:background="@drawable/edit_rect"
+          android:textColor="@color/white"
+          android:padding="@dimen/_10sdp"
+          android:gravity="center"
+
+          android:layout_height="match_parent" />
+  </LinearLayout>
+</LinearLayout>

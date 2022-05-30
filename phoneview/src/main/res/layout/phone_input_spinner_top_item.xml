@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:layout_width="25dp"
+           android:layout_height="match_parent"
+           app:srcCompat="@drawable/fr_"
+           android:id="@+id/phone_input_spinner_item_flag"
+           android:layout_marginTop="4dp"/>
+
+       <TextView
+           android:id="@+id/phone_input_spinner_item_country_code"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="8dp"
+           android:layout_marginTop="3dp"
+           android:text="FR"
+           android:visibility="gone"
+           android:textStyle="bold"
+           android:textColor="@android:color/black"
+           android:textSize="20sp" />
+
+       <TextView
+           android:gravity="center_vertical"
+           android:id="@+id/phone_input_spinner_item_country_name"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="8dp"
+           android:layout_marginTop="3dp"
+           android:text="France"
+           android:textColor="@android:color/black"
+           android:textSize="15sp" />
+
+       <TextView
+           android:gravity="center_vertical"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:textColor="@android:color/secondary_text_dark_nodisable"
+           android:text="(+33)"
+           android:paddingLeft="8dp"
+           android:id="@+id/phone_input_spinner_item_dialcode"
+           android:layout_marginTop="3dp"
+           android:layout_marginEnd="4dp"
+           android:textSize="15sp"
+           android:layout_marginRight="4dp" />
+
+   </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#70000000"/>
+</LinearLayout>

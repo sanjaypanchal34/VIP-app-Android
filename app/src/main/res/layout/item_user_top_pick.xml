@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.vip.marrakech.customs.ToolBarTitleTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="?normal"
+        android:textColor="@color/dark_blue"
+        android:id="@+id/tv_title"
+        android:text="1. IS this VIP Free/" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="?small"
+        android:id="@+id/tv_desc"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/white"/>
+</LinearLayout>

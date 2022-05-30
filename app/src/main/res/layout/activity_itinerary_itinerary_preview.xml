@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:navigationIcon="@drawable/ic_back_arrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <com.vip.marrakech.customs.ToolBarTitleTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/itinerary_preview"
+                android:textColor="@color/white"
+                android:textSize="?button" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:padding="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingVertical="@dimen/_5sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/client_name"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tv_client"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/group_type"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/tv_group"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:padding="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_right_circle"
+                android:layout_width="wrap_content"
+                android:text="@string/pax"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="?normal"
+                android:id="@+id/tv_pax"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:text="@string/total_cost"
+                android:id="@+id/label_cost"
+                android:textColor="@color/white"
+                android:textSize="?small" />
+
+            <TextView
+                android:id="@+id/tv_total_spend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingBottom="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+
+                android:id="@+id/label_holding"
+                android:text="@string/deposit"
+                android:textColor="@color/white"
+                android:textSize="?small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingBottom="@dimen/_3sdp"
+                android:id="@+id/tv_deposit_paid"
+                android:textColor="@color/white"
+                android:textSize="?normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:id="@+id/label_balance_to_pay"
+                android:text="@string/balance_to_pay"
+                android:textColor="@color/white"
+                android:textSize="?small" />
+
+            <TextView
+                android:id="@+id/tv_balance_to_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingBottom="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="?normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageResource="@drawable/user_main_layer" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_booking_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_user_itinerary_detail" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_a_notification_to_vendor"
+            android:textColor="@color/white"
+            android:textSize="?normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_now"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/now"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:theme="@style/checkBoxStyle" />
+
+            <CheckBox
+                android:id="@+id/cb_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/select_date_and_time"
+                android:textColor="@color/white"
+                android:textSize="?normal"
+                android:theme="@style/checkBoxStyle" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp">
+
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rect"
+                android:text="@string/commit"
+                android:textSize="?button" />
+
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rect"
+                android:text="@string/save"
+                android:textSize="?button" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

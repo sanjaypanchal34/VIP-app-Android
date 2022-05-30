@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextView">
+        <attr name="heading" format="dimension" />
+        <attr name="subHeading" format="dimension" />
+        <attr name="normal" format="dimension" />
+        <attr name="small" format="dimension" />
+        <attr name="button" format="dimension" />
+    </declare-styleable>
+</resources>
